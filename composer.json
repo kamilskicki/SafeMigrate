@@ -1,0 +1,34 @@
+{
+  "name": "safe-migrate/plugin",
+  "description": "Reliable WordPress migrations and restores with preflight diagnostics and recovery-first workflows.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "SafeMigrate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SafeMigrate\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "autoload": "composer dump-autoload",
+    "lint": "@php scripts/verify-php-syntax.php",
+    "test": "phpunit -c phpunit.xml.dist",
+    "ci": [
+      "@lint",
+      "@test"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
