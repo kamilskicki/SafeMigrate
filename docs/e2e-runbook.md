@@ -25,6 +25,7 @@ wp safe-migrate e2e --user=1 --destructive=1 --rollback-after=1
 From the plugin workspace:
 
 ```powershell
+$env:SAFE_MIGRATE_COMPOSE_DIR='D:\path\to\your\wordpress-environment'
 .\scripts\run-e2e.ps1
 .\scripts\run-e2e.ps1 -Destructive
 .\scripts\run-e2e.ps1 -Destructive -RollbackAfter

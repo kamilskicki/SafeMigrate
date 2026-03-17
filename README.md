@@ -49,6 +49,7 @@ The repository includes helper scripts for a paired local Docker environment.
 Typical workflow:
 
 ```powershell
+$env:SAFE_MIGRATE_COMPOSE_DIR='D:\path\to\your\wordpress-environment'
 .\scripts\sync-local-env.ps1
 .\scripts\run-e2e.ps1
 .\scripts\run-e2e.ps1 -Destructive
